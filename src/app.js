@@ -7,6 +7,7 @@ import path  from "path";
 import  hbs from 'hbs'
 
 const app = express();
+const port = process.env.PORT || 3000
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const __filename =fileURLToPath(import.meta.url)
 
@@ -84,6 +85,6 @@ app.get("*", (req, res) => {
     'error':'404 Page Not Found'
   })
 });
-app.listen("3000", () => {
-  console.log("app started");
+app.listen(port, () => {
+  console.log("app started on port : " + port);
 });

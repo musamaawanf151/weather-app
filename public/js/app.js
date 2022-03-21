@@ -10,9 +10,6 @@ const message1 = document.querySelector('#message1')
 
 const message2 = document.querySelector('#message2')
 
-// message1.textContent = 'Loaaading....'
-
-// message2.textContent = ' '
 
 weatherForm.addEventListener('submit',(e)=>{
     message1.textContent = 'Loaaading....'
@@ -32,7 +29,7 @@ weatherForm.addEventListener('submit',(e)=>{
 
             message1.textContent = data.location
             message2.textContent = data.weather
-            console.log(data) 
+            // console.log(data)    
         }
         
     })
